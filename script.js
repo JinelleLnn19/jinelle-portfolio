@@ -211,7 +211,7 @@ const translations = {
     aboutEyebrow: "专业能力概述",
     aboutTitle: "视觉基础，<br>全流程交付。",
     aboutText1: "具备扎实的视觉传达基础与完整的交互设计经验，项目覆盖移动端、智能穿戴、沉浸式大屏与户外公共空间等多终端场景。",
-    aboutText2: "能够熟练使用 Figma、Adobe Creative Suite 与 Blender，并运用用户研究方法完成从问题定义、信息架构、界面系统到交互原型和可用性测试的全流程设计。能够适应多任务协作与交付节奏，具备较强的承压能力和持续学习能力。",
+    aboutText2: "能够熟练使用 Figma、Adobe设计全家桶 与 Blender，并运用用户研究方法完成从问题定义、信息架构、界面系统到交互原型和可用性测试的全流程设计。能够适应多任务协作与交付节奏，具备较强的承压能力和持续学习能力。",
     contactEyebrow: "保持联系",
     contactTitle: "如果你有项目、职位或想法，欢迎联系我。",
     contactText: "期待与你交流。",
