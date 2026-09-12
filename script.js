@@ -746,7 +746,7 @@ function setLanguage(language) {
   currentLanguage = language;
   document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
   document.title = language === "zh"
-    ? "林婧柔 Jinelle — 体验与传播设计师"
+    ? "林婧柔 Jinelle"
     : "Jinelle Lin — Experience & Communication Designer";
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
