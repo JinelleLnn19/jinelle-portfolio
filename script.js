@@ -813,8 +813,6 @@ function setLanguage(language) {
     button.setAttribute("aria-pressed", String(isActive));
   });
 
-  highlightKeyPhrases(language);
-
   document.querySelectorAll("[data-project]").forEach((button) => {
     const project = projects[button.dataset.project];
     if (!project) return;
@@ -823,6 +821,7 @@ function setLanguage(language) {
   });
 
   if (activeProject) updateDialog();
+  else highlightKeyPhrases(language);
 }
 
 function updateDialog() {
@@ -839,6 +838,7 @@ function updateDialog() {
   dialogContribution.replaceChildren();
   project.contribution[currentLanguage].forEach((contribution) => {
     const item = document.createElement("li");
+    item.dataset.highlight = "";
     item.textContent = contribution;
     dialogContribution.append(item);
   });
@@ -863,6 +863,7 @@ function updateDialog() {
   const singleImage = project.images.length === 1;
   previousButton.hidden = singleImage;
   nextButton.hidden = singleImage;
+  highlightKeyPhrases(currentLanguage);
 }
 
 function openProject(projectKey) {
