@@ -19,7 +19,7 @@ const translations = {
     gpaLabel: "GPA",
     topFive: "Top 5%",
     rankLabel: "in major",
-    heroScholarship: "First-class university scholarship for two consecutive undergraduate years",
+    heroScholarship: "Outstanding Graduate (Bachelor’s) · First-class university scholarship for two consecutive years",
     viewWork: "View selected work",
     viewExperience: "Education & experience",
     profileStatus: "Master’s student at the University of Sydney · Expected March 2027",
@@ -89,7 +89,7 @@ const translations = {
     degreeDetail: "Sydney School of Architecture, Design and Planning · Expected March 2027",
     bachelorDegree: "Bachelor of Visual Communication Design",
     peizheng: "Guangdong Peizheng University · School of Arts",
-    bachelorDetail: "GPA 3.94 · Top 5% in major · Completed June 2025.",
+    bachelorDetail: "GPA 3.94 · Top 5% in major · Outstanding Graduate (Bachelor’s) · Graduated June 2025.",
     lidoRole: "Design Intern · LIDO ART",
     lidoDetail: "UI and graphic design, basic photography, copywriting and social media content production.",
     lidoProof1: "Observed 50+ visitors and documented 10+ findings to improve four workshop sessions.",
@@ -141,7 +141,7 @@ const translations = {
     gpaLabel: "绩点",
     topFive: "前 5%",
     rankLabel: "专业排名",
-    heroScholarship: "本科期间连续两年获得学校一等奖学金",
+    heroScholarship: "本科优秀毕业生 · 连续两年获得学校一等奖学金",
     viewWork: "查看精选项目",
     viewExperience: "教育与经历",
     profileStatus: "悉尼大学在读硕士研究生 · 预计 2027 年 3 月毕业",
@@ -211,7 +211,7 @@ const translations = {
     degreeDetail: "悉尼建筑设计与规划学院 · 预计 2027 年 3 月毕业",
     bachelorDegree: "视觉传达设计学士",
     peizheng: "广东培正学院 · 艺术学院",
-    bachelorDetail: "绩点 3.94 · 专业排名前 5% · 2025 年 6 月完成本科学习。",
+    bachelorDetail: "绩点 3.94 · 专业排名前 5% · 本科优秀毕业生 · 2025 年 6 月毕业。",
     lidoRole: "设计实习生 · LIDO ART",
     lidoDetail: "参与 UI 与平面设计、基础拍摄、文案整理及社交媒体内容制作。",
     lidoProof1: "观察 50+ 位观众并整理 10+ 条体验问题，支持 4 场工作坊流程优化。",
@@ -770,8 +770,8 @@ const nextButton = document.querySelector(".gallery-control--next");
 
 function highlightKeyPhrases(language) {
   const keywords = language === "zh"
-    ? /\d+(?:\.\d+)?\s*\+?\s*(?:%|页|位|条|场|件|份|篇|套|年|步)?|≤\s*\d+|一等奖学金|用户旅程|信息架构|可用性测试|交互设计|视觉传达设计|视觉传播|全流程设计|移动端|智能穿戴|公共空间/g
-    : /\d+(?:\.\d+)?\s*\+?\s*(?:%|screens?|visitors?|findings?|sessions?|assets?|decks?|posts?|years?|steps?)?|≤\s*\d+|first-class university scholarship|user journeys?|information architecture|usability testing|interaction design|visual communication|end-to-end|mobile|wearable|public space/gi;
+    ? /\d+(?:\.\d+)?\s*\+?\s*(?:%|页|位|条|场|件|份|篇|套|年|步)?|≤\s*\d+|一等奖学金|优秀毕业生|用户旅程|信息架构|可用性测试|交互设计|视觉传达设计|视觉传播|全流程设计|移动端|智能穿戴|公共空间/g
+    : /\d+(?:\.\d+)?\s*\+?\s*(?:%|screens?|visitors?|findings?|sessions?|assets?|decks?|posts?|years?|steps?)?|≤\s*\d+|first-class university scholarship|outstanding graduate|user journeys?|information architecture|usability testing|interaction design|visual communication|end-to-end|mobile|wearable|public space/gi;
 
   document.querySelectorAll("[data-highlight]").forEach((element) => {
     const source = element.textContent;
