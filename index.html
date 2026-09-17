@@ -1,17 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Jingrou (Jinelle) Lin — Experience and Communication Designer based in Sydney, working across UI/UX, interaction design and visual communication.">
+    <meta name="description" content="林婧柔 Jingrou Jinelle Lin，悉尼大学交互设计与电子艺术硕士研究生，视觉传达设计与体验设计作品集。">
     <meta name="theme-color" content="#f7f5ef">
-    <title>Jinelle Lin — Experience &amp; Communication Designer</title>
+    <title>林婧柔 Jinelle — 体验与传播设计师</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="skip">跳至主要内容</a>
 
     <header class="site-header" aria-label="Primary navigation">
       <a class="brand" href="#top" aria-label="Jinelle Lin — home">
@@ -20,16 +20,16 @@
       </a>
 
       <nav class="desktop-nav" aria-label="Portfolio sections">
-        <a href="#work" data-i18n="navWork">Work</a>
-        <a href="#experience" data-i18n="navExperience">Experience</a>
-        <a href="#about" data-i18n="navAbout">About</a>
-        <a href="#contact" data-i18n="navContact">Contact</a>
+        <a href="#experience" data-i18n="navExperience">经历</a>
+        <a href="#work" data-i18n="navWork">作品</a>
+        <a href="#about" data-i18n="navAbout">关于我</a>
+        <a href="#contact" data-i18n="navContact">联系</a>
       </nav>
 
       <div class="language-switch" aria-label="Language switcher">
-        <button class="language-option is-active" type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button class="language-option" type="button" data-lang="en" aria-pressed="false">EN</button>
         <span aria-hidden="true">/</span>
-        <button class="language-option" type="button" data-lang="zh" aria-pressed="false">中文</button>
+        <button class="language-option is-active" type="button" data-lang="zh" aria-pressed="true">中文</button>
       </div>
     </header>
 
@@ -39,17 +39,39 @@
         <div class="hero-orb hero-orb--mint" aria-hidden="true"></div>
 
         <div class="hero-copy reveal">
-          <p class="eyebrow" data-i18n="heroEyebrow">Portfolio · Sydney, Australia</p>
+          <p class="eyebrow" data-i18n="heroEyebrow">个人作品集 · 澳大利亚悉尼</p>
           <h1>
-            <span data-i18n="heroLead">Hello, I’m</span>
-            <span class="display-name">Jingrou<br>“Jinelle” Lin.</span>
+            <span data-i18n="heroLead">你好，我是</span>
+            <span class="display-name" data-i18n="displayName">林婧柔 <small>Jingrou “Jinelle” Lin</small></span>
           </h1>
-          <p class="hero-role" data-i18n="heroRole">Experience &amp; Communication Designer</p>
-          <p class="hero-summary" data-i18n="heroSummary">I design clear, engaging experiences across digital interfaces, public spaces and visual communication.</p>
+          <p class="hero-role" data-i18n="heroRole">体验与传播设计师</p>
+          <p class="hero-summary" data-i18n="heroSummary">我关注数字界面、公共空间与视觉传播，设计清晰、有吸引力且容易理解的体验。</p>
+
+          <div class="hero-education" aria-label="教育背景">
+            <article class="hero-education-card">
+              <span class="hero-education-kicker" data-i18n="masterLevel">硕士研究生 · 在读</span>
+              <h2 data-i18n="masterSchool">悉尼大学</h2>
+              <p data-i18n="masterField">交互设计和电子艺术</p>
+            </article>
+            <article class="hero-education-card">
+              <span class="hero-education-kicker" data-i18n="bachelorLevel">全日制本科</span>
+              <h2 data-i18n="bachelorSchool">广东培正学院</h2>
+              <p data-i18n="bachelorField">视觉传达设计</p>
+              <div class="hero-metrics">
+                <span><strong>3.94</strong> <small data-i18n="gpaLabel">绩点</small></span>
+                <span><strong data-i18n="topFive">前 5%</strong> <small data-i18n="rankLabel">专业排名</small></span>
+              </div>
+            </article>
+            <p class="hero-honour"><span aria-hidden="true">✦</span> <span data-i18n="heroScholarship">本科期间连续两年获得学校一等奖学金</span></p>
+          </div>
 
           <div class="hero-actions">
             <a class="button button--dark" href="#work">
-              <span data-i18n="viewWork">View selected work</span>
+              <span data-i18n="viewWork">查看作品</span>
+              <span aria-hidden="true">↘</span>
+            </a>
+            <a class="button button--light" href="#experience">
+              <span data-i18n="viewExperience">教育与经历</span>
               <span aria-hidden="true">↘</span>
             </a>
           </div>
@@ -61,19 +83,104 @@
           </div>
           <div class="profile-note">
             <span class="availability-dot" aria-hidden="true"></span>
-            <span data-i18n="profileStatus">Master’s student at the University of Sydney</span>
+            <span data-i18n="profileStatus">悉尼大学在读硕士研究生 · 预计 2027 年毕业</span>
           </div>
           <dl class="profile-facts">
             <div>
-              <dt data-i18n="locationLabel">Based in</dt>
-              <dd data-i18n="locationValue">Sydney, Australia</dd>
+              <dt data-i18n="locationLabel">现居</dt>
+              <dd data-i18n="locationValue">澳大利亚悉尼</dd>
             </div>
             <div>
-              <dt data-i18n="languagesLabel">Languages</dt>
-              <dd data-i18n="languagesValue">Mandarin · Cantonese · English</dd>
+              <dt data-i18n="languagesLabel">语言</dt>
+              <dd data-i18n="languagesValue">普通话 · 粤语 · 英语</dd>
             </div>
           </dl>
         </aside>
+      </section>
+
+      <section class="experience-section section-shell" id="experience">
+        <header class="section-heading reveal">
+          <div>
+            <p class="eyebrow" data-i18n="experienceEyebrow">Experience &amp; education</p>
+            <h2 data-i18n="experienceTitle">Education and applied design experience.</h2>
+          </div>
+        </header>
+
+        <div class="experience-layout">
+          <div class="timeline reveal">
+            <article class="timeline-item">
+              <p class="timeline-date">07 / 2025–03 / 2027</p>
+              <div>
+                <h3 data-i18n="degree">Master of Interaction Design and Electronic Arts</h3>
+                <p>The University of Sydney</p>
+                <p class="timeline-detail" data-i18n="degreeDetail">Sydney School of Architecture, Design and Planning · Expected March 2027</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <p class="timeline-date">2025</p>
+              <div>
+                <h3 data-i18n="bachelorDegree">Bachelor of Visual Communication Design</h3>
+                <p data-i18n="peizheng">Guangdong Peizheng University · School of Arts</p>
+                <p class="timeline-detail" data-i18n="bachelorDetail" data-highlight>绩点 3.94 · 专业排名前 5% · 2025 年 6 月完成本科学习。</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <p class="timeline-date">03–07 / 2025</p>
+              <div>
+                <h3 data-i18n="lidoRole">Design Intern · LIDO ART</h3>
+                <p class="timeline-detail" data-i18n="lidoDetail">UI and graphic design, basic photography, copywriting and social media content production.</p>
+                <ul class="timeline-proof">
+                  <li data-i18n="lidoProof1" data-highlight>Observed 50+ visitors and documented 10+ findings to improve four workshop sessions.</li>
+                  <li data-i18n="lidoProof2" data-highlight>Delivered 12+ forum assets and unified six speaker decks.</li>
+                  <li data-i18n="lidoProof3" data-highlight>Published eight social posts and refined their information hierarchy using content-performance feedback.</li>
+                </ul>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <p class="timeline-date">12 / 2024–02 / 2025</p>
+              <div>
+                <h3 data-i18n="jierRole">Design Intern · Guangzhou Ji’er Advertising Co., Ltd.</h3>
+                <p class="timeline-detail" data-i18n="jierDetail">UI design and campaign planning support.</p>
+                <ul class="timeline-proof">
+                  <li data-i18n="jierProof1" data-highlight>Produced 20+ interface screens across client projects.</li>
+                  <li data-i18n="jierProof2" data-highlight>Supported 10+ requirement discussions and prepared five interaction-flow proposals.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <div class="experience-side reveal">
+            <aside class="skills-panel">
+              <p class="eyebrow" data-i18n="toolkit">Toolkit</p>
+              <div class="skill-group">
+                <h3 data-i18n="designTools">Design &amp; prototyping</h3>
+                <div class="skill-list"><span>Figma</span><span>Adobe XD</span><span>Photoshop</span><span>Illustrator</span><span>InDesign</span><span>Canva</span></div>
+              </div>
+              <div class="skill-group">
+                <h3 data-i18n="motionTools">Motion &amp; 3D</h3>
+                <div class="skill-list"><span>After Effects</span><span>Blender</span><span>Substance 3D Painter</span></div>
+              </div>
+              <div class="skill-group">
+                <h3 data-i18n="researchAi">Research &amp; AI workflow</h3>
+                <div class="skill-list"><span data-i18n="interviews">Interviews</span><span data-i18n="usabilityTesting">Usability testing</span><span data-i18n="userJourney">User journeys</span><span data-i18n="aigcWorkflow">AIGC-assisted workflow</span></div>
+              </div>
+            </aside>
+
+            <aside class="recognition-panel">
+              <p class="eyebrow" data-i18n="recognition">Recognition</p>
+              <article>
+                <p class="recognition-year">2024</p>
+                <h3 data-i18n="awardTitle">National Excellence Award</h3>
+                <p data-i18n="awardDetail">16th National College Student Advertising Art Competition · “藿‘箱’常伴”</p>
+              </article>
+              <article>
+                <p class="recognition-year">2022–2024</p>
+                <h3 data-i18n="scholarshipTitle">学校一等奖学金</h3>
+                <p data-i18n="scholarshipDetail" data-highlight>连续两年获评。</p>
+              </article>
+            </aside>
+          </div>
+        </div>
       </section>
 
       <section class="intro-strip" aria-label="Design focus">
@@ -92,7 +199,7 @@
             <p class="eyebrow" data-i18n="selectedEyebrow">Selected work · 2025–2026</p>
             <h2 data-i18n="selectedTitle">Designing connected experiences.</h2>
           </div>
-          <p data-i18n="selectedIntro">Four projects spanning emergency systems, public-space interaction, environmental learning and cultural storytelling.</p>
+          <p data-i18n="selectedIntro" data-highlight>Four projects spanning emergency systems, public-space interaction, environmental learning and cultural storytelling.</p>
         </header>
 
         <div class="project-grid">
@@ -106,7 +213,7 @@
                 <span>UI/UX</span><span data-i18n="crossDevice">Cross-device</span><span data-i18n="serviceSystem">Service system</span>
               </div>
               <h3>EmberPath AU</h3>
-              <p data-i18n="emberCard">A mobile and smartwatch emergency experience designed for bushfire-prone Australian communities.</p>
+              <p data-i18n="emberCard" data-highlight>A mobile and smartwatch emergency experience designed for bushfire-prone Australian communities.</p>
               <div class="project-stats" aria-label="Project outcomes">
                 <span><strong>35+</strong><small data-i18n="screens">screens</small></span>
                 <span><strong>≤3</strong><small data-i18n="coreSteps">core steps</small></span>
@@ -127,7 +234,7 @@
                 <span data-i18n="publicSpace">Public space</span><span data-i18n="mobileUi">Mobile UI</span>
               </div>
               <h3>Traces of Time</h3>
-              <p data-i18n="tracesCard">A five-stop outdoor experience that connects local history with screens, sound, light and movement.</p>
+              <p data-i18n="tracesCard" data-highlight>A five-stop outdoor experience that connects local history with screens, sound, light and movement.</p>
               <div class="project-stats" aria-label="Project outcomes">
                 <span><strong>5</strong><small data-i18n="touchpoints">touchpoints</small></span>
                 <span><strong>25+</strong><small data-i18n="screens">screens</small></span>
@@ -148,7 +255,7 @@
                 <span data-i18n="immersive">Immersive</span><span data-i18n="gameDesign">Game design</span>
               </div>
               <h3>Habitat Echo</h3>
-              <p data-i18n="habitatCard">A collaborative migratory-bird puzzle designed for MAP mima’s 360-degree Cube space.</p>
+              <p data-i18n="habitatCard" data-highlight>A collaborative migratory-bird puzzle designed for MAP mima’s 360-degree Cube space.</p>
               <div class="project-stats" aria-label="Project outcomes">
                 <span><strong>30+</strong><small data-i18n="screens">screens</small></span>
                 <span><strong>20+</strong><small data-i18n="testers">testers</small></span>
@@ -169,7 +276,7 @@
                 <span>App Design</span><span>AIGC</span><span data-i18n="culturalStory">Cultural storytelling</span>
               </div>
               <h3 data-i18n="solarTitle">Our Solar Terms</h3>
-              <p data-i18n="solarCard">A friendly digital platform that makes the 24 Chinese solar terms easier to explore and use in daily life.</p>
+              <p data-i18n="solarCard" data-highlight>A friendly digital platform that makes the 24 Chinese solar terms easier to explore and use in daily life.</p>
               <div class="project-stats" aria-label="Project outcomes">
                 <span><strong>40+</strong><small data-i18n="screens">screens</small></span>
                 <span><strong>50+</strong><small data-i18n="components">components</small></span>
@@ -196,7 +303,7 @@
             <img src="assets/images/jay-workshop.webp" width="1920" height="1080" alt="Art Encounters with Jay exhibition and workshop design" loading="lazy">
             <div class="creative-caption">
               <div><span>01 / Exhibition &amp; Workshop</span><h3 data-i18n="jayTitle">Art Encounters with Jay</h3></div>
-              <p data-i18n="jayCaption">Visitor observation, visual materials, workshop delivery and social content for a cross-disciplinary art exhibition.</p>
+              <p data-i18n="jayCaption" data-highlight>Visitor observation, visual materials, workshop delivery and social content for a cross-disciplinary art exhibition.</p>
             </div>
             <button class="project-open" type="button" data-project="jay" aria-label="Open Art Encounters with Jay work"></button>
           </article>
@@ -205,7 +312,7 @@
             <img src="assets/images/lido-bacc.webp" width="1920" height="1080" alt="LIDO and BACC Arts Education Forum visual identity" loading="lazy">
             <div class="creative-caption">
               <div><span>02 / Event Identity</span><h3>LIDO × BACC</h3></div>
-              <p data-i18n="lidoCaption">Poster series, invitations, presentation styling, event collateral and social media.</p>
+              <p data-i18n="lidoCaption" data-highlight>Poster series, invitations, presentation styling, event collateral and social media.</p>
             </div>
             <button class="project-open" type="button" data-project="lido" aria-label="Open LIDO and BACC work"></button>
           </article>
@@ -214,7 +321,7 @@
             <img src="assets/images/lido-social.webp" width="1920" height="1080" alt="LIDO ART long-form editorial content design" loading="lazy">
             <div class="creative-caption">
               <div><span>03 / Editorial Design</span><h3 data-i18n="editorialTitle">LIDO ART Editorial Content</h3></div>
-              <p data-i18n="editorialCaption">Long-form mobile content design with clearer hierarchy, pacing and brand consistency.</p>
+              <p data-i18n="editorialCaption" data-highlight>Long-form mobile content design with clearer hierarchy, pacing and brand consistency.</p>
             </div>
             <button class="project-open" type="button" data-project="editorial" aria-label="Open LIDO ART editorial content work"></button>
           </article>
@@ -223,7 +330,7 @@
             <img src="assets/images/cloud-patterns.webp" width="1920" height="1080" alt="Rosy Cloud Shoulder cultural pattern illustrations" loading="lazy">
             <div class="creative-caption">
               <div><span>04 / Illustration</span><h3 data-i18n="cloudTitle">Rosy Cloud Shoulder</h3></div>
-              <p data-i18n="cloudCaption">A twelve-month illustration system inspired by traditional Chinese patterns and festivals.</p>
+              <p data-i18n="cloudCaption" data-highlight>A twelve-month illustration system inspired by traditional Chinese patterns and festivals.</p>
             </div>
             <button class="project-open" type="button" data-project="cloud" aria-label="Open Rosy Cloud Shoulder work"></button>
           </article>
@@ -232,7 +339,7 @@
             <img src="assets/images/night-world.webp" width="1920" height="1080" alt="Nighty Night Whole World key visual design" loading="lazy">
             <div class="creative-caption">
               <div><span>05 / Key Visual</span><h3 data-i18n="nightTitle">Nighty Night, Whole World</h3></div>
-              <p data-i18n="nightCaption">A calm, playful identity and collateral set for a night-time radio concept.</p>
+              <p data-i18n="nightCaption" data-highlight>A calm, playful identity and collateral set for a night-time radio concept.</p>
             </div>
             <button class="project-open" type="button" data-project="night" aria-label="Open Nighty Night Whole World work"></button>
           </article>
@@ -241,7 +348,7 @@
             <img src="assets/images/veggie-circle.webp" width="1920" height="1080" alt="Veggie Circle fresh produce brand identity" loading="lazy">
             <div class="creative-caption">
               <div><span>06 / Branding</span><h3 data-i18n="veggieTitle">Veggie Circle</h3></div>
-              <p data-i18n="veggieCaption">A fresh-market identity designed around quality, convenience and a relaxed shopping experience.</p>
+              <p data-i18n="veggieCaption" data-highlight>A fresh-market identity designed around quality, convenience and a relaxed shopping experience.</p>
             </div>
             <button class="project-open" type="button" data-project="veggie" aria-label="Open Veggie Circle work"></button>
           </article>
@@ -281,99 +388,14 @@
         </div>
       </section>
 
-      <section class="experience-section section-shell" id="experience">
-        <header class="section-heading reveal">
-          <div>
-            <p class="eyebrow" data-i18n="experienceEyebrow">Experience &amp; education</p>
-            <h2 data-i18n="experienceTitle">Education and applied design experience.</h2>
-          </div>
-        </header>
-
-        <div class="experience-layout">
-          <div class="timeline reveal">
-            <article class="timeline-item">
-              <p class="timeline-date">07 / 2025–03 / 2027</p>
-              <div>
-                <h3 data-i18n="degree">Master of Interaction Design and Electronic Arts</h3>
-                <p>The University of Sydney</p>
-                <p class="timeline-detail" data-i18n="degreeDetail">Sydney School of Architecture, Design and Planning · Expected March 2027</p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <p class="timeline-date">2025</p>
-              <div>
-                <h3 data-i18n="bachelorDegree">Bachelor of Visual Communication Design</h3>
-                <p data-i18n="peizheng">Guangdong Peizheng University · School of Arts</p>
-                <p class="timeline-detail" data-i18n="bachelorDetail">Completed June 2025.</p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <p class="timeline-date">03–07 / 2025</p>
-              <div>
-                <h3 data-i18n="lidoRole">Design Intern · LIDO ART</h3>
-                <p class="timeline-detail" data-i18n="lidoDetail">UI and graphic design, basic photography, copywriting and social media content production.</p>
-                <ul class="timeline-proof">
-                  <li data-i18n="lidoProof1">Observed 50+ visitors and documented 10+ findings to improve four workshop sessions.</li>
-                  <li data-i18n="lidoProof2">Delivered 12+ forum assets and unified six speaker decks.</li>
-                  <li data-i18n="lidoProof3">Published eight social posts and refined their information hierarchy using content-performance feedback.</li>
-                </ul>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <p class="timeline-date">12 / 2024–02 / 2025</p>
-              <div>
-                <h3 data-i18n="jierRole">Design Intern · Guangzhou Ji’er Advertising Co., Ltd.</h3>
-                <p class="timeline-detail" data-i18n="jierDetail">UI design and campaign planning support.</p>
-                <ul class="timeline-proof">
-                  <li data-i18n="jierProof1">Produced 20+ interface screens across client projects.</li>
-                  <li data-i18n="jierProof2">Supported 10+ requirement discussions and prepared five interaction-flow proposals.</li>
-                </ul>
-              </div>
-            </article>
-          </div>
-
-          <div class="experience-side reveal">
-            <aside class="skills-panel">
-              <p class="eyebrow" data-i18n="toolkit">Toolkit</p>
-              <div class="skill-group">
-                <h3 data-i18n="designTools">Design &amp; prototyping</h3>
-                <div class="skill-list"><span>Figma</span><span>Adobe XD</span><span>Photoshop</span><span>Illustrator</span><span>InDesign</span><span>Canva</span></div>
-              </div>
-              <div class="skill-group">
-                <h3 data-i18n="motionTools">Motion &amp; 3D</h3>
-                <div class="skill-list"><span>After Effects</span><span>Blender</span><span>Substance 3D Painter</span></div>
-              </div>
-              <div class="skill-group">
-                <h3 data-i18n="researchAi">Research &amp; AI workflow</h3>
-                <div class="skill-list"><span data-i18n="interviews">Interviews</span><span data-i18n="usabilityTesting">Usability testing</span><span data-i18n="userJourney">User journeys</span><span data-i18n="aigcWorkflow">AIGC-assisted workflow</span></div>
-              </div>
-            </aside>
-
-            <aside class="recognition-panel">
-              <p class="eyebrow" data-i18n="recognition">Recognition</p>
-              <article>
-                <p class="recognition-year">2024</p>
-                <h3 data-i18n="awardTitle">National Excellence Award</h3>
-                <p data-i18n="awardDetail">16th National College Student Advertising Art Competition · “藿‘箱’常伴”</p>
-              </article>
-              <article>
-                <p class="recognition-year">2022–2024</p>
-                <h3 data-i18n="scholarshipTitle">University Comprehensive Scholarship</h3>
-                <p data-i18n="scholarshipDetail">Awarded in two consecutive academic years.</p>
-              </article>
-            </aside>
-          </div>
-        </div>
-      </section>
-
       <section class="about-section section-shell" id="about">
         <div class="about-card reveal">
           <p class="eyebrow" data-i18n="aboutEyebrow">About my approach</p>
           <div class="about-grid">
             <h2 data-i18n="aboutTitle">Clarity first.<br>Feeling matters.</h2>
             <div>
-              <p data-i18n="aboutText1">My background combines visual communication with interaction design. I have completed four end-to-end interaction systems across mobile, wearable, immersive-screen and outdoor public-space contexts.</p>
-              <p data-i18n="aboutText2">I work from research and information architecture through interface systems, prototyping and usability testing. In team projects, I focus on how a concept works, how it looks and how people understand it.</p>
+              <p data-i18n="aboutText1" data-highlight>My background combines visual communication with interaction design. I have completed four end-to-end interaction systems across mobile, wearable, immersive-screen and outdoor public-space contexts.</p>
+              <p data-i18n="aboutText2" data-highlight>I work from research and information architecture through interface systems, prototyping and usability testing. In team projects, I focus on how a concept works, how it looks and how people understand it.</p>
             </div>
           </div>
         </div>

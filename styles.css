@@ -171,11 +171,11 @@ img {
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.7fr);
-  gap: clamp(48px, 8vw, 110px);
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.66fr);
+  gap: clamp(36px, 5vw, 76px);
   align-items: center;
-  min-height: min(830px, calc(100svh - 69px));
-  padding-block: 88px;
+  min-height: calc(100svh - 69px);
+  padding-block: clamp(38px, 5vh, 68px);
   overflow: hidden;
 }
 
@@ -197,7 +197,7 @@ img {
 .hero h1 {
   max-width: 850px;
   margin: 0;
-  font-size: clamp(3.6rem, 8.4vw, 7.6rem);
+  font-size: clamp(3.35rem, 6.7vw, 6rem);
   font-weight: 620;
   letter-spacing: -0.075em;
   line-height: 0.9;
@@ -217,9 +217,23 @@ img {
   display: block;
 }
 
+.display-name small {
+  display: block;
+  margin-top: 0.2em;
+  color: var(--muted);
+  font-size: 0.27em;
+  font-weight: 560;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+html[lang="en"] .hero h1 {
+  font-size: clamp(3.4rem, 6.9vw, 6.2rem);
+}
+
 .hero-role {
   width: fit-content;
-  margin: 30px 0 0;
+  margin: 20px 0 0;
   padding: 8px 14px;
   background: var(--yellow);
   border-radius: 999px;
@@ -229,17 +243,99 @@ img {
 
 .hero-summary {
   max-width: 660px;
-  margin: 26px 0 0;
+  margin: 16px 0 0;
   color: #414641;
-  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-size: clamp(0.98rem, 1.4vw, 1.1rem);
   line-height: 1.55;
+}
+
+.hero-education {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.hero-education-card {
+  min-width: 0;
+  padding: 17px 18px 14px;
+  border: 1px solid rgba(23, 25, 23, 0.11);
+  border-radius: 18px;
+  background: rgba(255, 254, 251, 0.84);
+  box-shadow: 0 10px 30px rgba(56, 61, 54, 0.055);
+}
+
+.hero-education-card:first-child {
+  border-top: 4px solid var(--mint-strong);
+}
+
+.hero-education-card:nth-child(2) {
+  border-top: 4px solid var(--coral);
+}
+
+.hero-education-kicker {
+  color: #336c5c;
+  font-size: 0.72rem;
+  font-weight: 750;
+}
+
+.hero-education-card h2 {
+  margin: 8px 0 3px;
+  font-size: clamp(1.05rem, 1.8vw, 1.38rem);
+  line-height: 1.25;
+}
+
+.hero-education-card p {
+  margin: 0;
+  color: #4a514c;
+  font-size: 0.83rem;
+  line-height: 1.45;
+}
+
+.hero-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.hero-metrics > span {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: #fce5d5;
+}
+
+.hero-metrics strong {
+  color: #864427;
+  font-size: 1rem;
+}
+
+.hero-metrics small {
+  color: #594c41;
+  font-size: 0.67rem;
+}
+
+.hero-honour {
+  grid-column: 1 / -1;
+  margin: -2px 0 0;
+  color: #40694c;
+  font-size: 0.84rem;
+  font-weight: 760;
+}
+
+.hero-honour span:first-child {
+  margin-right: 5px;
+  color: #c16f48;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 34px;
+  margin-top: 22px;
 }
 
 .button {
@@ -282,7 +378,7 @@ img {
 }
 
 .portrait-frame {
-  height: 390px;
+  height: 340px;
   overflow: hidden;
   background: linear-gradient(155deg, #f5e8df, #dceee9);
   border-radius: calc(var(--radius-lg) - 8px);
@@ -394,6 +490,30 @@ img {
   border-radius: 999px;
   color: rgba(255, 255, 255, 0.78);
   font-size: 0.76rem;
+}
+
+.text-highlight {
+  padding: 0 0.1em;
+  color: #285e50;
+  background: linear-gradient(transparent 43%, rgba(127, 202, 184, 0.42) 43%);
+  font-weight: 750;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.experience-section .text-highlight {
+  color: #bde9dd;
+  background: linear-gradient(transparent 48%, rgba(127, 202, 184, 0.21) 48%);
+}
+
+.recognition-panel .text-highlight {
+  color: #2d6958;
+  background: linear-gradient(transparent 48%, rgba(127, 202, 184, 0.36) 48%);
+}
+
+.project-stats strong,
+.dialog-fact strong {
+  color: #a75a39;
 }
 
 .portfolio-section,
@@ -756,6 +876,14 @@ img {
   margin: 0;
   font-size: 1.15rem;
   font-weight: 620;
+}
+
+.timeline-item:nth-child(-n+2) h3 {
+  color: var(--mint);
+}
+
+.recognition-panel article:last-child h3 {
+  color: #2d6958;
 }
 
 .timeline-item div > p:not(.timeline-detail) {
@@ -1165,6 +1293,10 @@ img {
     max-width: 760px;
   }
 
+  .hero-education {
+    max-width: 760px;
+  }
+
   .profile-card {
     display: grid;
     grid-template-columns: 220px 1fr;
@@ -1231,6 +1363,18 @@ img {
 
   .hero h1 {
     font-size: clamp(3.15rem, 17vw, 5rem);
+  }
+
+  html[lang="en"] .hero h1 {
+    font-size: clamp(3rem, 13vw, 4.4rem);
+  }
+
+  .hero-education {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-education-card {
+    padding: 16px;
   }
 
   .button {

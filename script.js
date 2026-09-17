@@ -7,9 +7,21 @@ const translations = {
     navContact: "Contact",
     heroEyebrow: "Portfolio · Sydney, Australia",
     heroLead: "Hello, I’m",
+    displayName: 'Jingrou <small>“Jinelle” Lin</small>',
     heroRole: "Experience & Communication Designer",
     heroSummary: "I design clear, engaging experiences across digital interfaces, public spaces and visual communication.",
+    masterLevel: "Master’s student · Current",
+    masterSchool: "The University of Sydney",
+    masterField: "Interaction Design and Electronic Arts",
+    bachelorLevel: "Full-time bachelor’s degree",
+    bachelorSchool: "Guangdong Peizheng University",
+    bachelorField: "Visual Communication Design",
+    gpaLabel: "GPA",
+    topFive: "Top 5%",
+    rankLabel: "in major",
+    heroScholarship: "First-class university scholarship for two consecutive undergraduate years",
     viewWork: "View selected work",
+    viewExperience: "Education & experience",
     profileStatus: "Master’s student at the University of Sydney · Expected 2027",
     locationLabel: "Based in",
     locationValue: "Sydney, Australia",
@@ -76,7 +88,7 @@ const translations = {
     degreeDetail: "Sydney School of Architecture, Design and Planning · Expected March 2027",
     bachelorDegree: "Bachelor of Visual Communication Design",
     peizheng: "Guangdong Peizheng University · School of Arts",
-    bachelorDetail: "Completed June 2025.",
+    bachelorDetail: "GPA 3.94 · Top 5% in major · Completed June 2025.",
     lidoRole: "Design Intern · LIDO ART",
     lidoDetail: "UI and graphic design, basic photography, copywriting and social media content production.",
     lidoProof1: "Observed 50+ visitors and documented 10+ findings to improve four workshop sessions.",
@@ -97,7 +109,7 @@ const translations = {
     recognition: "Recognition",
     awardTitle: "National Excellence Award",
     awardDetail: "16th National College Student Advertising Art Competition · “藿‘箱’常伴”",
-    scholarshipTitle: "University Comprehensive Scholarship",
+    scholarshipTitle: "First-class University Scholarship",
     scholarshipDetail: "Awarded in two consecutive academic years.",
     aboutEyebrow: "Professional profile",
     aboutTitle: "Visual foundations.<br>End-to-end delivery.",
@@ -116,9 +128,21 @@ const translations = {
     navContact: "联系",
     heroEyebrow: "个人作品集 · 澳大利亚悉尼",
     heroLead: "你好，我是",
+    displayName: "林婧柔 <small>Jingrou “Jinelle” Lin</small>",
     heroRole: "体验与传播设计师",
     heroSummary: "我关注数字界面、公共空间与视觉传播，设计清晰、有吸引力且容易理解的体验。",
+    masterLevel: "硕士研究生 · 在读",
+    masterSchool: "悉尼大学",
+    masterField: "交互设计和电子艺术",
+    bachelorLevel: "全日制本科",
+    bachelorSchool: "广东培正学院",
+    bachelorField: "视觉传达设计",
+    gpaLabel: "绩点",
+    topFive: "前 5%",
+    rankLabel: "专业排名",
+    heroScholarship: "本科期间连续两年获得学校一等奖学金",
     viewWork: "查看精选项目",
+    viewExperience: "教育与经历",
     profileStatus: "悉尼大学在读硕士研究生 · 预计 2027 年毕业",
     locationLabel: "现居",
     locationValue: "澳大利亚悉尼",
@@ -185,7 +209,7 @@ const translations = {
     degreeDetail: "悉尼建筑设计与规划学院 · 预计 2027 年 3 月毕业",
     bachelorDegree: "视觉传达设计学士",
     peizheng: "广东培正学院 · 艺术学院",
-    bachelorDetail: "2025 年 6 月完成本科学习。",
+    bachelorDetail: "绩点 3.94 · 专业排名前 5% · 2025 年 6 月完成本科学习。",
     lidoRole: "设计实习生 · LIDO ART",
     lidoDetail: "参与 UI 与平面设计、基础拍摄、文案整理及社交媒体内容制作。",
     lidoProof1: "观察 50+ 位观众并整理 10+ 条体验问题，支持 4 场工作坊流程优化。",
@@ -206,12 +230,12 @@ const translations = {
     recognition: "奖项与荣誉",
     awardTitle: "全国优秀奖",
     awardDetail: "第 16 届全国大学生广告艺术大赛 · 《藿“箱”常伴》",
-    scholarshipTitle: "校级综合奖学金",
-    scholarshipDetail: "连续两个学年获评。",
+    scholarshipTitle: "学校一等奖学金",
+    scholarshipDetail: "连续两年获评。",
     aboutEyebrow: "专业能力概述",
     aboutTitle: "视觉基础，<br>全流程交付。",
     aboutText1: "具备扎实的视觉传达基础与完整的交互设计经验，项目覆盖移动端、智能穿戴、沉浸式大屏与户外公共空间等多终端场景。",
-    aboutText2: "能够熟练使用 Figma、Adobe设计全家桶 与 Blender，并运用用户研究方法完成从问题定义、信息架构、界面系统到交互原型和可用性测试的全流程设计。能够适应多任务协作与交付节奏，具备较强的承压能力和持续学习能力。",
+    aboutText2: "能够熟练使用 Figma、Adobe Creative Suite 与 Blender，并运用用户研究方法完成从问题定义、信息架构、界面系统到交互原型和可用性测试的全流程设计。能够适应多任务协作与交付节奏，具备较强的承压能力和持续学习能力。",
     contactEyebrow: "保持联系",
     contactTitle: "如果你有项目、职位或想法，欢迎联系我。",
     contactText: "期待与你交流。",
@@ -721,7 +745,7 @@ const projects = {
   }
 };
 
-let currentLanguage = "en";
+let currentLanguage = "zh";
 let activeProject = null;
 let activeImageIndex = 0;
 
@@ -742,18 +766,41 @@ const imageCount = document.querySelector("#imageCount");
 const previousButton = document.querySelector(".gallery-control--previous");
 const nextButton = document.querySelector(".gallery-control--next");
 
+function highlightKeyPhrases(language) {
+  const keywords = language === "zh"
+    ? /\d+(?:\.\d+)?\s*\+?\s*(?:%|页|位|条|场|件|份|篇|套|年|步)?|≤\s*\d+|一等奖学金|用户旅程|信息架构|可用性测试|交互设计|视觉传达设计|视觉传播|全流程设计|移动端|智能穿戴|公共空间/g
+    : /\d+(?:\.\d+)?\s*\+?\s*(?:%|screens?|visitors?|findings?|sessions?|assets?|decks?|posts?|years?|steps?)?|≤\s*\d+|first-class university scholarship|user journeys?|information architecture|usability testing|interaction design|visual communication|end-to-end|mobile|wearable|public space/gi;
+
+  document.querySelectorAll("[data-highlight]").forEach((element) => {
+    const source = element.textContent;
+    const fragment = document.createDocumentFragment();
+    let position = 0;
+    keywords.lastIndex = 0;
+    for (const match of source.matchAll(keywords)) {
+      if (match.index > position) fragment.append(document.createTextNode(source.slice(position, match.index)));
+      const mark = document.createElement("mark");
+      mark.className = "text-highlight";
+      mark.textContent = match[0];
+      fragment.append(mark);
+      position = match.index + match[0].length;
+    }
+    fragment.append(document.createTextNode(source.slice(position)));
+    element.replaceChildren(fragment);
+  });
+}
+
 function setLanguage(language) {
   currentLanguage = language;
   document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
   document.title = language === "zh"
-    ? "林婧柔 Jinelle"
+    ? "林婧柔 Jinelle — 体验与传播设计师"
     : "Jinelle Lin — Experience & Communication Designer";
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.dataset.i18n;
     const value = translations[language][key];
     if (!value) return;
-    if (key === "aboutTitle") {
+    if (key === "aboutTitle" || key === "displayName") {
       element.innerHTML = value;
     } else {
       element.textContent = value;
@@ -766,18 +813,14 @@ function setLanguage(language) {
     button.setAttribute("aria-pressed", String(isActive));
   });
 
+  highlightKeyPhrases(language);
+
   document.querySelectorAll("[data-project]").forEach((button) => {
     const project = projects[button.dataset.project];
     if (!project) return;
     const action = language === "zh" ? "打开项目" : "Open project";
     button.setAttribute("aria-label", `${action}: ${project.title[language]}`);
   });
-
-  try {
-    localStorage.setItem("jinelle-portfolio-language", language);
-  } catch (error) {
-    // The site still works when storage is unavailable.
-  }
 
   if (activeProject) updateDialog();
 }
@@ -880,10 +923,4 @@ if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-mot
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 
-let initialLanguage = "en";
-try {
-  initialLanguage = localStorage.getItem("jinelle-portfolio-language") || "en";
-} catch (error) {
-  initialLanguage = "en";
-}
-setLanguage(initialLanguage === "zh" ? "zh" : "en");
+setLanguage("zh");
