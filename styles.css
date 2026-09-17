@@ -420,6 +420,10 @@ html[lang="en"] .hero h1 {
   padding: 18px 6px 8px;
 }
 
+.profile-facts > div:last-child {
+  grid-column: 1 / -1;
+}
+
 .profile-facts dt {
   margin-bottom: 5px;
   color: var(--muted);
