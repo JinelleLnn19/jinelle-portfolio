@@ -231,14 +231,32 @@ html[lang="en"] .hero h1 {
   font-size: clamp(3.4rem, 6.9vw, 6.2rem);
 }
 
-.hero-role {
-  width: fit-content;
+.hero-roles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
   margin: 20px 0 0;
+}
+
+.hero-role {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
   padding: 8px 14px;
   background: var(--yellow);
   border-radius: 999px;
   font-size: clamp(0.9rem, 1.4vw, 1.05rem);
   font-weight: 700;
+  white-space: nowrap;
+}
+
+.hero-role--interaction {
+  background: var(--mint);
+}
+
+.hero-role--visual {
+  background: var(--peach);
 }
 
 .hero-summary {
