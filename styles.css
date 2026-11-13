@@ -749,6 +749,15 @@ html[lang="en"] .hero h1 {
   border-top: 1px solid var(--line);
 }
 
+.creative-section .section-heading {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 22px;
+}
+
+.creative-section .section-heading > p {
+  max-width: 720px;
+}
+
 .creative-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
