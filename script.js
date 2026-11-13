@@ -1,3 +1,20 @@
+// Add a GA4 measurement ID in the page head to enable private dashboard reporting.
+const analyticsId = document.querySelector('meta[name="ga4-measurement-id"]')?.content.trim();
+if (analyticsId && /^G-[A-Z0-9]+$/.test(analyticsId)) {
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  window.gtag("js", new Date());
+  window.gtag("config", analyticsId);
+  const analyticsTag = document.createElement("script");
+  analyticsTag.async = true;
+  analyticsTag.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(analyticsId)}`;
+  document.head.append(analyticsTag);
+}
+
+function trackAnalyticsEvent(eventName) {
+  if (typeof window.gtag === "function") window.gtag("event", eventName);
+}
+
 const translations = {
   en: {
     skip: "Skip to content",
@@ -32,7 +49,7 @@ const translations = {
     homeBaseValue: "Guangzhou, Guangdong",
     languagesLabel: "Languages",
     languagesValue: "Mandarin · Cantonese · English · IELTS 6.5",
-    introStrip: "Turning research into journeys, systems and visual stories that people can understand and enjoy.",
+    introStrip: "Turning research into journeys, systems and visual stories,\nso people can understand and take part.",
     tagInteraction: "Interaction Design",
     tagVisual: "Visual Communication",
     tagExperience: "Experience Design",
@@ -159,7 +176,7 @@ const translations = {
     homeBaseValue: "广东广州",
     languagesLabel: "语言",
     languagesValue: "普通话 · 粤语 · 英语（IELTS 6.5）",
-    introStrip: "将研究转化为用户旅程、系统与视觉故事，让人们容易理解，也愿意参与。",
+    introStrip: "将研究转化为用户旅程、系统与视觉故事，\n让人们容易理解，也愿意参与。",
     tagInteraction: "交互设计",
     tagVisual: "视觉传播",
     tagExperience: "体验设计",
@@ -892,6 +909,7 @@ function openProject(projectKey) {
   updateDialog();
   dialog.showModal();
   document.body.classList.add("dialog-open");
+  trackAnalyticsEvent(`project_open_${projectKey}`);
 }
 
 function changeImage(direction) {
