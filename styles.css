@@ -483,26 +483,27 @@ html[lang="en"] .hero h1 {
 
 .intro-strip {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 70px;
-  align-items: end;
+  grid-template-columns: minmax(0, 2.15fr) minmax(0, 1fr);
+  gap: clamp(32px, 4vw, 64px);
+  align-items: center;
   padding: 52px max(24px, calc((100vw - 1240px) / 2));
   color: #f7f5ef;
   background: var(--ink);
 }
 
 .intro-strip > p {
-  max-width: 720px;
   margin: 0;
-  font-size: clamp(1.5rem, 3.2vw, 2.65rem);
+  font-size: clamp(1.5rem, 2.65vw, 2.1rem);
   font-weight: 520;
   letter-spacing: -0.035em;
-  line-height: 1.18;
+  line-height: 1.28;
+  white-space: pre-line;
 }
 
 .intro-tags {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 8px;
 }
 
@@ -1474,6 +1475,10 @@ html[lang="en"] .hero h1 {
 
   .intro-strip {
     padding-block: 42px;
+  }
+
+  .intro-tags {
+    justify-content: flex-start;
   }
 
   .project-grid,
