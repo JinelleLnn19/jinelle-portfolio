@@ -124,7 +124,7 @@ const translations = {
     contactEyebrow: "Let’s connect",
     contactTitle: "Have a project, role or conversation in mind?",
     contactText: "I’d be happy to hear from you.",
-    footerNote: "Designed with care in Sydney."
+    footerNote: "Designed with care."
   },
   zh: {
     skip: "跳至主要内容",
@@ -251,7 +251,7 @@ const translations = {
     contactEyebrow: "保持联系",
     contactTitle: "如果你有项目、职位或想法，欢迎联系我。",
     contactText: "期待与你交流。",
-    footerNote: "用心设计于悉尼。"
+    footerNote: "用心设计。"
   }
 };
 
@@ -774,6 +774,7 @@ const dialogOutcomeLabel = document.querySelector("#dialogOutcomeLabel");
 const dialogOutcome = document.querySelector("#dialogOutcome");
 const dialogFacts = document.querySelector("#dialogFacts");
 const dialogImage = document.querySelector("#dialogImage");
+const editorialLinks = document.querySelectorAll(".dialog-article-link");
 const imageCount = document.querySelector("#imageCount");
 const previousButton = document.querySelector(".gallery-control--previous");
 const nextButton = document.querySelector(".gallery-control--next");
@@ -871,6 +872,12 @@ function updateDialog() {
   });
   dialogImage.src = `assets/images/${imageName}`;
   dialogImage.alt = `${project.title[currentLanguage]} — ${activeImageIndex + 1}`;
+  editorialLinks.forEach((link, index) => {
+    link.hidden = activeProject !== "editorial";
+    link.setAttribute("aria-label", currentLanguage === "zh"
+      ? `打开第 ${index + 1} 篇 LIDO ART 公众号文章（新标签页）`
+      : `Open LIDO ART article ${index + 1} in a new tab`);
+  });
   imageCount.textContent = `${activeImageIndex + 1} / ${project.images.length}`;
   const singleImage = project.images.length === 1;
   previousButton.hidden = singleImage;
