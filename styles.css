@@ -1123,7 +1123,7 @@ html[lang="en"] .hero h1 {
   max-width: none;
   max-height: calc(100vh - 32px);
   padding: 0;
-  overflow: hidden auto;
+  overflow: hidden;
   color: var(--ink);
   background: var(--paper);
   border: 0;
@@ -1138,13 +1138,36 @@ html[lang="en"] .hero h1 {
 
 .dialog-shell {
   position: relative;
+  max-height: calc(100vh - 56px);
+  max-height: calc(100dvh - 56px);
+  margin: 12px;
   padding: clamp(24px, 4vw, 52px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(23, 25, 23, 0.32) transparent;
+}
+
+.dialog-shell::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dialog-shell::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dialog-shell::-webkit-scrollbar-thumb {
+  background: rgba(23, 25, 23, 0.32);
+  border-radius: 999px;
+}
+
+.dialog-shell::-webkit-scrollbar-thumb:hover {
+  background: rgba(23, 25, 23, 0.52);
 }
 
 .dialog-close {
   position: sticky;
   z-index: 3;
-  top: 0;
+  top: 16px;
   display: grid;
   place-items: center;
   width: 42px;
@@ -1516,6 +1539,9 @@ html[lang="en"] .hero h1 {
   }
 
   .dialog-shell {
+    max-height: calc(100vh - 48px);
+    max-height: calc(100dvh - 48px);
+    margin: 8px;
     padding: 20px;
   }
 
