@@ -1165,14 +1165,14 @@ html[lang="en"] .hero h1 {
 }
 
 .dialog-close {
-  position: sticky;
-  z-index: 3;
-  top: 16px;
+  position: absolute;
+  z-index: 10;
+  top: 28px;
+  right: 28px;
   display: grid;
   place-items: center;
   width: 42px;
   height: 42px;
-  margin: 0 0 -42px auto;
   color: white;
   background: var(--ink);
   border: 0;
@@ -1543,6 +1543,11 @@ html[lang="en"] .hero h1 {
     max-height: calc(100dvh - 48px);
     margin: 8px;
     padding: 20px;
+  }
+
+  .dialog-close {
+    top: 16px;
+    right: 16px;
   }
 
   .dialog-copy {
