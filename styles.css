@@ -1249,10 +1249,35 @@ html[lang="en"] .hero h1 {
 }
 
 .dialog-media img {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: contain;
 }
+
+.dialog-article-link {
+  position: absolute;
+  z-index: 1;
+  top: 18%;
+  bottom: 2%;
+  width: 19%;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.dialog-article-link--first { left: 37%; }
+.dialog-article-link--second { left: 57%; }
+.dialog-article-link--third { left: 77%; }
+
+.dialog-article-link:hover,
+.dialog-article-link:focus-visible {
+  border-color: var(--mint-strong);
+  background: rgba(189, 233, 221, 0.12);
+  outline: none;
+}
+
+.dialog-article-link[hidden] { display: none; }
 
 .gallery-control {
   position: absolute;
